@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ChipTesting.iml" filepath="$PROJECT_DIR$/ChipTesting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CLRSSolutions.iml" filepath="$PROJECT_DIR$/CLRSSolutions.iml" />
     </modules>
   </component>
 </project>
