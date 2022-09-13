@@ -1,8 +1,9 @@
 package com.company;
 
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class RandomSampleClass {
     /**
@@ -37,10 +38,68 @@ public class RandomSampleClass {
         }
     }
 
+     static int randomArraySearch(int[] arr,int x){
+       int res = -1;
+       var found = false;
+       Set<Integer> badSat = new HashSet<>();
+       do {
+           int i = new Random().nextInt(arr.length);
+           //System.out.println(String.format("i=%s",i));
+
+           if (arr[i]==x) {
+               res = i;
+               found = true;
+           } else {
+               boolean add = badSat.add(i);
+               if (add){
+                   System.out.println(String.format("add=%s",i));
+               }
+           }
+
+       } while(badSat.size()<arr.length && !found);
+
+       return res;
+    }
+
+    /**
+     * 6.2.5
+     * @param arr
+     * @param i
+     * @return
+     */
+    static int[] heapify(int[] arr,int i){
+        int largest = Integer.MIN_VALUE;
+        if (i<=arr.length && (2*i+1)<=arr.length && arr[2*i+1]>arr[i]){
+            largest = 2*i+1;
+        } else {
+            largest = i;
+        }
+        if (i<=arr.length && (2*i+2)<=arr.length && arr[2*i+2]>arr[i]) {
+            largest = 2 * i + 2;
+        }
+
+        if (largest!=i) {
+            int buf = arr[i];
+            arr[i]=arr[largest];
+            arr[largest]=buf;
+
+            heapify(arr,largest);
+        }
+    return arr;
+
+}
+
+
     public static void main(String ...arr){
         RandomSampleClass randomSample =new RandomSampleClass();
-        Set s= randomSample.randomSample(5,10);
-        s.forEach(ss-> System.out.println(ss));
+        //Set s= randomSample.randomSample(5,10);
+        //s.forEach(ss-> System.out.println(ss));
+        //int[] intArr = IntStream.range(0, 10).toArray();
+        //System.out.println(randomArraySearch(intArr,11));
+        int[] res =  heapify(new int[]{3,10,1,8,9,0},0);
+        for (int i = 0;i< res.length; i++) {
+            System.out.print(res[i]+" ");
+        }
     }
 
 }
