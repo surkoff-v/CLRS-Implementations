@@ -69,12 +69,12 @@ public class RandomSampleClass {
      */
     static int[] heapify(int[] arr,int i){
         int largest = Integer.MIN_VALUE;
-        if (i<=arr.length && (2*i+1)<=arr.length && arr[2*i+1]>arr[i]){
+        if (i<arr.length && (2*i+1)<arr.length && arr[2*i+1]>arr[i]){
             largest = 2*i+1;
         } else {
             largest = i;
         }
-        if (i<=arr.length && (2*i+2)<=arr.length && arr[2*i+2]>arr[i]) {
+        if (i<arr.length && (2*i+2)<arr.length && arr[2*i+2]>arr[largest]) {
             largest = 2 * i + 2;
         }
 
@@ -86,8 +86,15 @@ public class RandomSampleClass {
             heapify(arr,largest);
         }
     return arr;
+    }
 
-}
+    static int[] max_heapify(int[] arr){
+        int from = (int)Math.floor(arr.length);
+        for (int i = from-1; i >= 0;i--){
+            heapify(arr, i);
+        }
+        return arr;
+    }
 
 
     public static void main(String ...arr){
@@ -96,7 +103,9 @@ public class RandomSampleClass {
         //s.forEach(ss-> System.out.println(ss));
         //int[] intArr = IntStream.range(0, 10).toArray();
         //System.out.println(randomArraySearch(intArr,11));
-        int[] res =  heapify(new int[]{3,10,1,8,9,0},0);
+        //int[] res =  heapify(new int[]{3,10,1,8,9,0},0);
+        int[] res = max_heapify(new int[]{5,3,17,10,84,19,6,22,9});
+
         for (int i = 0;i< res.length; i++) {
             System.out.print(res[i]+" ");
         }
