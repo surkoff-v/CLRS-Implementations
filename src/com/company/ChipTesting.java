@@ -87,7 +87,7 @@ class BadChip implements Chip {
     }
 }
 
-class ChipTesting {
+public class ChipTesting {
     public static PairB jig(Chip a, Chip b) {
         PairB res = new PairB(a.check(b), b.check(a));
         return res;
