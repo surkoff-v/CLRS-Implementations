@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.PriorityQueue;
+
 public class HeapSort {
 
 
@@ -51,12 +53,13 @@ public class HeapSort {
         return arr;
     }
 
+
     public static void main(String ...arr){
 
-        int[] res = heap_sort(new int[]{5,3,17,10,84,19,6,22,9});
+    int[] res = heap_sort(new int[]{9,8,7,6,5,4,3,2,1});
 
-        for (int i = 0;i< res.length; i++) {
-            System.out.print(res[i]+" ");
+    for (int i = 0;i< res.length; i++) {
+        System.out.print(res[i]+" ");
         }
     }
 }
