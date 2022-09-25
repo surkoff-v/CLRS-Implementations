@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CLRSSolutions.iml" filepath="$PROJECT_DIR$/CLRSSolutions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CLRS-Implementations.iml" filepath="$PROJECT_DIR$/CLRS-Implementations.iml" />
     </modules>
   </component>
 </project>
