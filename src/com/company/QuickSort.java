@@ -1,6 +1,5 @@
 package com.company;
 
-import java.sql.SQLOutput;
 /*
 Thow ways partionting standart and Hoare
  */
