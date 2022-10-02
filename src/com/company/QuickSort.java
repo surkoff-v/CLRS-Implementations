@@ -1,7 +1,7 @@
 package com.company;
 
 /*
-Thow ways partionting standart and Hoare
+ Two way partionting Lomuto and Hoare
  */
 public class QuickSort {
 
@@ -48,10 +48,10 @@ public class QuickSort {
             }
             ++j;
 
-            for (int k=0;k<a.length;k++){
+           /* for (int k=0;k<a.length;k++){
                 System.out.print(a[k]+" ");
             }
-            System.out.println();
+            System.out.println();*/
         }
 
         int buf = a[i+1];
@@ -112,7 +112,7 @@ public class QuickSort {
 
         printArr(a,0,a.length-1);
 
-
     }
+
 
 }
