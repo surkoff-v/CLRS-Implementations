@@ -1,7 +1,6 @@
-package com.company;
+package com.company.sorting;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 

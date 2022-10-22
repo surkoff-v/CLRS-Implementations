@@ -1,4 +1,4 @@
-package com.company;
+package com.company.sorting;
 
 import java.util.*;
 import java.util.stream.IntStream;

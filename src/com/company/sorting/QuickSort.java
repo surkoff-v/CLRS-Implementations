@@ -1,4 +1,4 @@
-package com.company;
+package com.company.sorting;
 
 /*
  Two way partionting Lomuto and Hoare

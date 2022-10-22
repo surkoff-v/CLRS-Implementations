@@ -1,4 +1,4 @@
-package com.company;
+package com.company.sorting;
 
 /*
   Prtitioning return first and last index iqual pivots
