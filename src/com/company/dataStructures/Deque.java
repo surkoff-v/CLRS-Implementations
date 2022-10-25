@@ -1,5 +1,7 @@
 package com.company.dataStructures;
 
+import java.util.LinkedList;
+
 public class Deque {
 
     static int[] arr = new int[6];
@@ -7,6 +9,7 @@ public class Deque {
     static int head = 0;
     static int tail = 0;
     static int cnt = 0;
+
 
     /**
      * Head
