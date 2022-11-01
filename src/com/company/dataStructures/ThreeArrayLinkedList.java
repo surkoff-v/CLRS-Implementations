@@ -147,6 +147,9 @@ public class ThreeArrayLinkedList {
             pointer = next[pointer];
         }
 
+        /**
+         * make from scratch free list from rigth to max-size
+         */
         for (i = right; i < MAX_SIZE - 1; i++) {
             next[i] = i + 1;
         }
